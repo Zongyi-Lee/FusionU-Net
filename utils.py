@@ -408,7 +408,7 @@ def get_model(model_name):
     import configs.Config as config
 
     if 'FusionUNet' in model_name:
-        from funet import FusionUNet
+        from funet.FusionUNet import FusionUNet
         return FusionUNet(3, config.n_labels, 64, 3)
 
     elif 'UCTransNet' in model_name:

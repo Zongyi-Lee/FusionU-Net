@@ -8,7 +8,7 @@ import ml_collections
 ## PARAMETERS OF THE MODEL
 save_model = True
 tensorboard = False
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 use_cuda = torch.cuda.is_available()
 seed = 666
 os.environ['PYTHONHASHSEED'] = str(seed)
@@ -16,7 +16,7 @@ os.environ['PYTHONHASHSEED'] = str(seed)
 cosineLR = True # whether use cosineLR or not
 n_channels = 3
 n_labels = 1
-epochs = 1000
+epochs = 100
 img_size = 224
 print_frequency = 1
 save_frequency = 5000
@@ -55,7 +55,7 @@ visualize_path     = save_path + 'visualize_val/'
 
 
 ##########################################################################
-# CTrans configs
+# configs for UCtransNet
 ##########################################################################
 def get_CTranS_config():
     config = ml_collections.ConfigDict()
